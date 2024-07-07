@@ -1,0 +1,110 @@
+// -*- mode: json -*-
+
+{
+  "layer":"top",
+  "position":"top",
+  //"height":15,
+
+  "modules-left": ["hyprland/workspaces","custom/sep", "custom/spotify"],
+  "modules-center": ["custom/leftsfx#3","custom/leftsfx#2","custom/leftsfx#1","clock#1","custom/rightsfx#1","custom/rightsfx#2","custom/rightsfx#3"],
+  "modules-right": ["pulseaudio","custom/sep", "backlight","custom/sep","network","custom/sep","battery","custom/sep","custom/power","custom/sep"],
+  "custom/sep": {
+    "format": " ",
+    "tooltip": false
+  }, 
+  "custom/leftsfx#1":{
+    "format": "",
+    "tooltip": false
+  }, 
+  "custom/rightsfx#1":{
+    "format": "",
+    "tooltip": false
+  }, 
+  "custom/leftsfx#2":{
+    "format": "",
+    "tooltip": false
+  }, 
+  "custom/rightsfx#2":{
+    "format": "",
+    "tooltip": false
+  },
+  "custom/leftsfx#3":{
+    "format": "",
+    "tooltip": false
+  }, 
+  "custom/rightsfx#3":{
+    "format": "",
+    "tooltip": false
+  },
+  "custom/spotify": {
+    "exec": "$HOME/get_status.sh",
+    "restart-interval":2,
+    "format": "{icon} {}",
+    "format-icons": [""],
+		"tooltip": false
+  },
+  "custom/power" : {
+    "exec": "echo ' '",
+    "format": "{}",
+    "tooltip": false,
+    "on-click": "$HOME/.config/rofi/custom/powermenu.sh"
+  },
+	"hyprland/workspaces": {
+    "persistent-workspaces": {
+          "*": 9
+    },
+    "format-icons": {
+        "active":"",
+        "inactive":""
+    },
+    "tooltip": false
+	},
+	"clock#1": {
+		"format": "{:%H:%M}",
+		"tooltip": false
+	},
+  "pulseaudio": {
+		"format": "{icon} {volume:2}%",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "MUTE",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 5,
+		"on-click": "pamixer -t",
+		"on-click-right": "pavucontrol"
+	},
+  "battery": {
+		"states": {
+			"good": 95,
+			"warning": 50,
+			"critical": 20
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [""],
+		"tooltip": false
+  },
+  "network": {
+    "format-wifi": "  {essid}",
+    "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ",
+		"tooltip": false
+  }
+
+}

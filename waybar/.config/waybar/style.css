@@ -1,0 +1,104 @@
+* {
+	font-family: monospace;
+  min-height: 0;
+}
+
+window#waybar {
+	background: transparent;
+	color: #fdf6e3;
+}
+#workspaces,
+#clock.1,
+#pulseaudio,
+#backlight,
+#network,
+#custom-power,
+#battery {
+	background: #414141;
+  border-radius: 10px;
+  border: 1px solid #a1a1a1;
+  padding:0px 10px;
+	font-size: 16px;
+}
+
+#workspaces {
+  border-radius: 0 10px 10px 0;
+  font-size:20px;
+  font-weight:bolder;
+  border: 1px transparent;
+}
+  
+#workspaces button {
+	padding: 2px 3px 0 3px;
+	color: #ffffff;
+	background: #5b5b6c;
+  border-bottom: 3px solid #7b7b7b;
+}
+#workspaces button.empty {
+  border-bottom: 3px solid #4b4b4b;
+	background: #414141;
+  color:#fdf6e3;
+}
+#workspaces button.active {
+  border-bottom: 3px solid #167be2;
+  color:#ffffff;
+}
+#workspaces button:hover {
+	background: #8f8f8f;
+  color:#ffffff;
+}
+#pulseaudio {
+	color: #76dbff;
+}
+#battery {
+	color: #0bd053;
+}
+#backlight {
+	color: #ddff00;
+}
+#network {
+	color: #da9bff;
+}
+#clock.1 {
+  font-size:20px;
+  font-weight:bold;
+  border: none;
+  border-radius: 0;
+}
+#custom-spotify {
+  font-size:16px;
+  font-weight:bold;
+  color: #2DC964;
+}
+#custom-power {
+  font-weight:bold;
+  color:#1793D1;
+}
+#custom-leftsfx.1 {
+  font-size:27px;
+  color:#414141;
+  background:#717171;
+}
+#custom-rightsfx.1 {
+  font-size:27px;
+  color:#414141;
+  background:#717171;
+}
+#custom-leftsfx.2 {
+  font-size:27px;
+  color:#717171;
+  background:#a1a1a1;
+}
+#custom-rightsfx.2 {
+  font-size:27px;
+  color:#717171;
+  background:#a1a1a1;
+}
+#custom-leftsfx.3 {
+  font-size:27px;
+  color:#a1a1a1;
+}
+#custom-rightsfx.3 {
+  font-size:27px;
+  color:#a1a1a1;
+}
