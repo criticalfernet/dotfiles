@@ -1,6 +1,6 @@
 
-
-OPTION=$(echo "Lock^Sleep^Hibernate^Restart^Poweroff^  " | rofi -dmenu -sep '^')
+THEME="$HOME/.config/rofi/powermenu-config.rasi"
+OPTION=$(echo "Cancel^Lock^Sleep^Hibernate^Restart^Poweroff" | rofi -dmenu -sep '^' -config $THEME)
 #echo "$OPTION"
 if [ "$OPTION" == "Lock" ]; then
   loginctl lock-session

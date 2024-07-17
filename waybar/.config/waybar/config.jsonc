@@ -41,7 +41,8 @@
     "restart-interval":2,
     "format": "{icon} {}",
     "format-icons": [""],
-		"tooltip": false
+		"tooltip": false,
+    "on-click": "kitty -e cava"
   },
   "custom/power" : {
     "exec": "echo ' '",
@@ -61,7 +62,8 @@
 	},
 	"clock#1": {
 		"format": "{:%H:%M}",
-		"tooltip": false
+		"tooltip": true,
+    "tooltip-format": "{:%d %b, %Y (%A)}"
 	},
   "pulseaudio": {
 		"format": "{icon} {volume:2}%",
@@ -104,7 +106,9 @@
     "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ",
-		"tooltip": false
+		"tooltip": false,
+    "on-click": "$HOME/.config/waybar/scripts/network-toggle.sh",
+    "on-click-right": "$HOME/.config/rofi/custom/network.sh"
   }
 
 }

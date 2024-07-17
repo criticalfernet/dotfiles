@@ -1,0 +1,91 @@
+configuration {
+  modes: "window,drun,run,ssh";
+  font:   "0xProto Nerd Font Regular 13";
+  drun-display-format: "{name}";
+}
+
+* {
+
+  background     : #222;
+  border     : #88f;
+  fg     : #eee;
+  scroll     : #223;
+  accent     : #1793D1;
+
+  background-color : transparent;
+  text-color       : @fg;
+
+  margin  : 0;
+  padding : 0;
+  spacing : 0;
+  active: #79ff95;
+  urgent: #fe9f64;
+}
+
+element-icon, element-text, scrollbar {
+  cursor: pointer;
+}
+
+window {
+  location : north east;
+  width    : 300px;
+  x-offset : -5px;
+  y-offset : 5px;
+
+  background-color: @background;
+  border: 2px;
+  border-color: @border;
+  border-radius: 6px;
+}
+
+mainbox {
+  children: [listview];
+}
+
+
+listview {
+  padding      : 4px 0px;
+  lines        : 12;
+  columns      : 1;
+  scrollbar    : true;
+  fixed-height : false;
+  dynamic      : true;
+}
+
+element {
+  padding : 4px 8px;
+  spacing : 8px;
+}
+
+element.normal.normal, element.normal.active {
+  text-color: @fg;
+  background-color : @background;
+}
+
+element.alternate.normal, element.alternate.active {
+  text-color: @fg;
+  background-color : @background;
+}
+
+element.selected.normal, element.selected.active {
+  text-color       : @background;
+  background-color : @accent;
+}
+
+element.selected.urgent {
+  background-color: @urgent;
+}
+
+element-icon {
+  size: 0.8em;
+}
+
+element-text {
+  text-color: inherit;
+}
+
+scrollbar {
+  handle-width : 4px;
+  handle-color : @scroll;
+  padding      : 0 4px;
+}
